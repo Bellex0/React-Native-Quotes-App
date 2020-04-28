@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "Trump-isms",
+    "description": "Feeling down lately? Need some words of inspiration and wisdom? Who better to give us a motivational speech than U.S. President, Donald J. Trump?! Use this app to get your dose of uplifiting quotes from Trump!",
     "slug": "Trump-isms",
     "platforms": [
       "ios",
