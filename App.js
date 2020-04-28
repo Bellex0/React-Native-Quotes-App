@@ -29,7 +29,7 @@ export default function App() {
       <Image source={require('./Trump.png')} style={styles.image} />
       <Text style={styles.header}>So Donald, tell me how you {'\n'} really feel...</Text>
       <TouchableHighlight style={styles.button} onPress={quoteAlert}>
-        <Text style={styles.buttonText}> Press here for your dose of Trump wisdom </Text>
+        <Text style={styles.buttonText}> Press here for an inspirational Trump quote </Text>
       </TouchableHighlight>
       
     </View>
