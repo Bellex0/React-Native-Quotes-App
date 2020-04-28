@@ -7,6 +7,7 @@ export default function App() {
   const [quote, setQuote] = useState({})
   const [hasError, setErrors] = useState(false);
 
+  useEffect(() => {
   async function fetchQuote (){
     const res = await fetch("https://api.tronalddump.io/random/quote");
     res
@@ -14,8 +15,6 @@ export default function App() {
       .then(res => setQuote(res.value))
       .catch(err => setErrors(err));
   }
-
-  useEffect(() => {
     fetchQuote();
   });
  
