@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, TouchableHighlight, Alert } from 'react-native';
+import { StyleSheet, Text, View, TouchableHighlight, Alert, Image } from 'react-native';
+
 
 export default function App() {
 
@@ -25,9 +26,10 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>So Donald, tell me how you really feel...</Text>
+      <Image source={require('./Trump.png')} style={styles.image} />
+      <Text style={styles.header}>So Donald, tell me how you {'\n'} really feel...</Text>
       <TouchableHighlight style={styles.button} onPress={quoteAlert}>
-        <Text> Press here for your dose of Trump wisdom </Text>
+        <Text style={styles.buttonText}> Press here for your dose of Trump wisdom </Text>
       </TouchableHighlight>
       
     </View>
@@ -41,12 +43,26 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
+  header: {
+    marginBottom: 50,
+    fontSize: 20,
+    fontWeight: "bold",
+    fontFamily: "American Typewriter"
+  },
   button: {
     backgroundColor: '#E29F2D',
     padding: 10, 
     alignItems: "center",
-    borderRadius: 15
-
-
+    borderRadius: 15,
+    marginBottom: 80
+  },
+  buttonText: {
+    fontFamily: "American Typewriter"
+  },
+  image: {
+    marginBottom: 10,
+    height: "50%",
+    width: "60%"
   }
+
 });
